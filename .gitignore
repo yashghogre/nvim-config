@@ -1,1 +1,2 @@
+.gitignore
 /lua/plugins/crackboard_nvim.lua
