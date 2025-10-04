@@ -1,7 +1,8 @@
 return {
     "goolord/alpha-nvim",
-    -- dependencies = { 'echasnovski/mini.icons' },
+
     dependencies = { 'nvim-tree/nvim-web-devicons' },
+
     config = function()
       local startify = require("alpha.themes.startify")
       local alpha = require'alpha'
@@ -17,15 +18,13 @@ return {
 
       dashboard.section.header.val = {
         [[  ]],
-        [[ ▄▀▀▄    ▄▀▀▄  ▄▀▀█▄   ▄▀▀▀█▀▀▄  ▄▀▀█▄▄▄▄  ▄▀▀▄▀▀▀▄]],
-        [[█   █    ▐  █ ▐ ▄▀ ▀▄ █    █  ▐ ▐  ▄▀   ▐ █   █   █]],
-        [[▐  █        █   █▄▄▄█ ▐   █       █▄▄▄▄▄  ▐  █▀▀█▀ ]],
-        [[  █   ▄    █   ▄▀   █    █        █    ▌   ▄▀    █ ]],
-        [[   ▀▄▀ ▀▄ ▄▀  █   ▄▀   ▄▀        ▄▀▄▄▄▄   █     █  ]],
-        [[         ▀    ▐   ▐   █          █    ▐   ▐     ▐  ]],
-        [[                      ▐          ▐                 ]],
+        [[ ██╗   ██╗ █████╗ ██╗   ██╗ █████╗  ]],
+        [[ ╚██╗ ██╔╝██╔══██╗╚██╗ ██╔╝██╔══██╗ ]],
+        [[  ╚████╔╝ ███████║ ╚████╔╝ ███████║ ]],
+        [[   ╚██╔╝  ██╔══██║  ╚██╔╝  ██╔══██║ ]],
+        [[    ██║   ██║  ██║   ██║   ██║  ██║ ]],
+        [[    ╚═╝   ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ]],
         [[  ]],
-
       }
 
       alpha.setup(dashboard.opts)
