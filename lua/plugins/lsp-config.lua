@@ -4,6 +4,7 @@ return {
   dependencies = {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
+    "mrcjkb/rustaceanvim",
   },
 
   config = function()
@@ -12,7 +13,7 @@ return {
       "lua_ls",
       "pyright",
       "ts_ls",
-      "rust_analyzer",
+      -- "rust_analyzer",
     }
 
     require("mason").setup()
@@ -27,11 +28,16 @@ return {
     vim.api.nvim_create_autocmd("LspAttach", {
       callback = function(args)
         local bufnr = args.buf
+        local client = vim.lsp.get_client_by_id(args.data.client_id)
         local opts = {buffer = bufnr}
 
         vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
         vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
         vim.keymap.set({'n', 'v'}, '<leader>ca', vim.lsp.buf.code_action, opts)
+
+        if client and client.server_capabilities.inlayHintProvider then
+          vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+        end
       end,
     })
 
