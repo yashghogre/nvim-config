@@ -10,5 +10,5 @@ return {
       vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>', {})
       vim.cmd([[hi NeoTreeNormal guibg=NONE ctermbg=NONE]])
       vim.cmd([[hi NeoTreeNormalNC guibg=NONE ctermbg=NONE]])
-    end      
+    end
   }
