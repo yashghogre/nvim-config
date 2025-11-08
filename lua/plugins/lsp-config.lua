@@ -10,9 +10,12 @@ return {
   config = function()
     local servers = {
       "clangd",
+      "docker_compose_language_service",
+      "dockerls",
       "lua_ls",
       "pyright",
       "ts_ls",
+      "yamlls",
       -- "rust_analyzer",
     }
 
